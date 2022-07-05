@@ -16,8 +16,8 @@ public class Student {
     private int rollno;
     @Enumerated(EnumType.STRING)
     private Gender gender;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "student")
-//    @JoinColumn(name = "standard_id")
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+//    @JoinColumn(name = "student_id", referencedColumnName = "id")
     private Standard standard;
 
     @OneToMany(cascade = CascadeType.ALL)

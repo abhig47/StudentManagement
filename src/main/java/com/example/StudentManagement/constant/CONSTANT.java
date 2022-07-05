@@ -5,9 +5,9 @@ public class CONSTANT {
 
     public static final String CREATESTUDENT = "/createStudent";
 
-    public static final String PROGRAMMERCONTROLLER = "/programmercontroller";
+    public static final String DELETESTUDENT = "/deleteStudent/{id}";
 
-    public static final String CREATEPROGRAMMER = "/createProgrammer";
+    public static final String GETALLSTUDENT = "/getALLStudentDetails";
 
     public static final String GETALLPROGRAMMER = "/getAllProgrammer";
 
