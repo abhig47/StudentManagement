@@ -20,11 +20,13 @@ public class Student {
 //    @JoinColumn(name = "student_id", referencedColumnName = "id")
     private Standard standard;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "student_id")
     private Set<Subject> subject;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "student_id", referencedColumnName = "id")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "student_id", referencedColumnName = "id")
     private Set<Address> address;
+
+
 }

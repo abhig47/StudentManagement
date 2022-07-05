@@ -14,4 +14,9 @@ public interface StudentService {
     String deleteStudent(int id) throws ParameterNotvalidException;
 
     List<Student> getAllStudent();
+
+    String updateStudentDetails(Student student) throws ParameterNotvalidException;
+
+    Student getAddress(Student student);
+
 }

@@ -21,7 +21,7 @@ public class CONSTANT {
 
     public static final String CREATEPAYMENT = "/createPayment";
 
-    public static final String STUDENT = "/student";
+    public static final String UPDATESTUDENT = "/updateStudent/";
 
     public static final String ID = "/{id}";
 
