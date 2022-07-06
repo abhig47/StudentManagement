@@ -7,7 +7,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Data
-@Entity
+@Entity(name = "student")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,8 +25,6 @@ public class Student {
     private Set<Subject> subject;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-//    @JoinColumn(name = "student_id", referencedColumnName = "id")
+    @JoinColumn(name = "student_id", referencedColumnName = "id")
     private Set<Address> address;
-
-
 }

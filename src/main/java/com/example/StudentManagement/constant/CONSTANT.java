@@ -9,7 +9,7 @@ public class CONSTANT {
 
     public static final String GETALLSTUDENT = "/getALLStudentDetails";
 
-    public static final String GETALLPROGRAMMER = "/getAllProgrammer";
+    public static final String GETALLSTUDENTUSINGNQ = "/getALLStudentDetailsusingNQ";
 
     public static final String DELETEPROGRAMMERBYID = "/deleteProgrammerById/{id}";
 

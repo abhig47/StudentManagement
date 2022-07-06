@@ -4,7 +4,6 @@ import com.example.StudentManagement.exception.ParameterNotvalidException;
 import com.example.StudentManagement.model.Student;
 import com.example.StudentManagement.repository.StudentRepository;
 import com.example.StudentManagement.service.StudentService;
-import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,9 +26,19 @@ public class StudentServiceImp implements StudentService {
         List<Student> getALLStudent = studentRepository.findAll();
         for (Student s : getALLStudent) {
 //            Hibernate.isInitialized(s);
-            s.getAddress();
+            s.getAddress().size();
         }
         return getALLStudent;
+    }
+
+    @Override
+    public List<Student> getALLStudentUsingNQ() {
+
+        List<Student> studentList = studentRepository.findStudent();
+//        for (Student student : studentList) {
+//            student.getAddress().size();
+//        }
+        return studentList;
     }
 
     @Override
@@ -40,12 +49,6 @@ public class StudentServiceImp implements StudentService {
         } else {
             throw new ParameterNotvalidException("Data Not Found");
         }
-    }
-
-    @Override
-    public Student getAddress(Student student) {
-        Student getAddress = studentRepository.findById(student.getId()).get();
-        return null;
     }
 
     @Override

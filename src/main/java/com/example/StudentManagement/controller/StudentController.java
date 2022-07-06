@@ -40,11 +40,16 @@ public class StudentController {
         }
         return s;
     }
+
     @Transactional
     @GetMapping(CONSTANT.GETALLSTUDENT)
     List<Student> getALlStudent() {
-        List<Student> getALlStudent = studentService.getAllStudent();
-        return getALlStudent;
+        return studentService.getAllStudent();
+    }
+
+    @GetMapping(CONSTANT.GETALLSTUDENTUSINGNQ)
+    List<Student> getAllStudentUsingNQ() {
+        return studentService.getALLStudentUsingNQ();
     }
 
     @DeleteMapping(CONSTANT.DELETESTUDENT)
