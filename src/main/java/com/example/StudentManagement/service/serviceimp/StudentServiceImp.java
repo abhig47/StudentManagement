@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
+@Transactional
 public class StudentServiceImp implements StudentService {
     @Autowired
     StudentRepository studentRepository;
@@ -42,6 +43,13 @@ public class StudentServiceImp implements StudentService {
     }
 
     @Override
+    public List<Student> getAllStudentUsingCB() {
+        return studentRepository.findALLStudentUsingNQ();
+    }
+
+
+
+    @Override
     public String deleteStudent(int id) throws ParameterNotvalidException {
         if (studentRepository.existsById(id)) {
             studentRepository.deleteById(id);
@@ -63,4 +71,10 @@ public class StudentServiceImp implements StudentService {
             throw new ParameterNotvalidException("Data not Found");
         }
     }
+
+    @Override
+    public List<Student> findStudentByID(int id) {
+        return studentRepository.findStudentById(id);
+    }
+
 }

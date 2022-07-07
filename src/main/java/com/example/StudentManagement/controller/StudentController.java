@@ -52,6 +52,11 @@ public class StudentController {
         return studentService.getALLStudentUsingNQ();
     }
 
+    @GetMapping(CONSTANT.FINDSTUDENTUSINGNQ)
+    List<Student> findALLStudentUsingCB() {
+        return studentService.getAllStudentUsingCB();
+    }
+
     @DeleteMapping(CONSTANT.DELETESTUDENT)
     String deleteStudent(@PathVariable("id") int id) throws ParameterNotvalidException {
         String s = null;
@@ -64,4 +69,10 @@ public class StudentController {
         }
         return s;
     }
+
+    @GetMapping(CONSTANT.FINDSTUDENTBYID)
+    List<Student> findStudentById(@PathVariable("id") int id) {
+        return studentService.findStudentByID(id);
+    }
+
 }

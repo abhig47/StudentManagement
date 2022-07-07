@@ -13,11 +13,11 @@ public class CONSTANT {
 
     public static final String DELETEPROGRAMMERBYID = "/deleteProgrammerById/{id}";
 
-    public static final String EMPLOYEE = "/employee";
+    public static final String FINDSTUDENTUSINGNQ = "/findALLStudentUsingNQ";
 
-    public static final String CREATEEPLOYEE = "/createEmployee";
+    public static final String FINDSTUDENTBYID = "/findStudentByID/{id}";
 
-    public static final String PAYMENT = "/payment";
+    public static final String FINDSTUDENTADDRESSBYID = "/findStudentAddressByID/{id}";
 
     public static final String CREATEPAYMENT = "/createPayment";
 
