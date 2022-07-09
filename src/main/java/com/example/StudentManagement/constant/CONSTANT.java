@@ -9,13 +9,12 @@ public class CONSTANT {
 
     public static final String GETALLSTUDENT = "/getALLStudentDetails";
 
-    public static final String GETALLSTUDENTUSINGNQ = "/getALLStudentDetailsusingNQ";
+    public static final String FINDSTUDENTUSINGCB = "/findALLStudentUsingCB";
 
-    public static final String FINDSTUDENTUSINGNQ = "/findALLStudentUsingNQ";
+    public static final String FINDSTUDENTUSINGQUERY = "/findALLStudentUsingQuery";
 
-    public static final String FINDSTUDENTBYID = "/findStudentByID/{id}";
+    public static final String FINDSTUDENTBYIDUSINGCB = "/findStudentByIDUsingCB/{id}";
 
     public static final String UPDATESTUDENT = "/updateStudent/";
-
 
 }

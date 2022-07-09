@@ -17,4 +17,7 @@ public interface StudentRepository extends JpaRepository<Student, Integer>, Stud
     @Query(value = "select a.* from student s join address a on s.id = a.student_id where s.id =:id", nativeQuery = true)
     Student getStudentAddressUsingNQ(@Param("id") int id);
 
+    @Query(value = "from student s join fetch s.address")
+    List<Student> findALLStudentUsingQuery();
+
 }

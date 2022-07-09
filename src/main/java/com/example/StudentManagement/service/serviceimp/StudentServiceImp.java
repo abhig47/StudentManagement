@@ -33,20 +33,14 @@ public class StudentServiceImp implements StudentService {
     }
 
     @Override
-    public List<Student> getALLStudentUsingNQ() {
-
-        List<Student> studentList = studentRepository.findStudent();
-//        for (Student student : studentList) {
-//            student.getAddress().size();
-//        }
-        return studentList;
+    public List<Student> findALLStudentUsingQuery() {
+        return studentRepository.findALLStudentUsingQuery();
     }
 
     @Override
     public List<Student> getAllStudentUsingCB() {
-        return studentRepository.findALLStudentUsingNQ();
+        return studentRepository.findALLStudentUsingCB();
     }
-
 
     @Override
     public String deleteStudent(int id) throws ParameterNotvalidException {

@@ -47,14 +47,14 @@ public class StudentController {
         return studentService.getAllStudent();
     }
 
-    @GetMapping(CONSTANT.GETALLSTUDENTUSINGNQ)
-    List<Student> getAllStudentUsingNQ() {
-        return studentService.getALLStudentUsingNQ();
-    }
-
-    @GetMapping(CONSTANT.FINDSTUDENTUSINGNQ)
+    @GetMapping(CONSTANT.FINDSTUDENTUSINGCB)
     List<Student> findALLStudentUsingCB() {
         return studentService.getAllStudentUsingCB();
+    }
+
+    @GetMapping(CONSTANT.FINDSTUDENTUSINGQUERY)
+    List<Student> findALLStudentUsingQuery() {
+        return studentService.findALLStudentUsingQuery();
     }
 
     @DeleteMapping(CONSTANT.DELETESTUDENT)
@@ -70,8 +70,8 @@ public class StudentController {
         return s;
     }
 
-    @GetMapping(CONSTANT.FINDSTUDENTBYID)
-    List<Student> findStudentById(@PathVariable("id") int id) {
+    @GetMapping(CONSTANT.FINDSTUDENTBYIDUSINGCB)
+    List<Student> findStudentById(@PathVariable int id) {
         return studentService.findStudentByID(id);
     }
 
